@@ -1,0 +1,22 @@
+{
+  "name": "temperature",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "socket.io-client": "^1.4.8",
+    "angular": "^1.5.8",
+    "angular-socket-io": "^0.7.0"
+  }
+}
