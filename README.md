@@ -11,7 +11,7 @@ Displaying and recording temperature using an IR Temperature Sensor connected to
 
 # Client
 
-Developed using AngularJS and Bootstrap and therefore mobile-compatible.
+Developed using AngularJS and Bootstrap and designed to be mobile-compatible. Graphs produced using (Angular) ChartJS.
 
 ## Home
 
