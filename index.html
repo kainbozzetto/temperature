@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<script src='bower_components/angular/angular.js'></script>
+		<script src='bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+		<script src='bower_components/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+		<script src='bower_components/socket.io-client/socket.io.js'></script>
+		<script src='bower_components/angular-socket-io/socket.js'></script>
+		<script src='bower_components/jquery/dist/jquery.min.js'></script>
+		<script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+		<script src='chart.js/dist/Chart.js'></script>
+		<script src='angular-chart.js/dist/angular-chart.min.js'></script>
+		<script src='app.js'></script>
+		<script src='navbar/navBar.js'></script>
+		<script src='home/HomeCtrl.js'></script>
+		<script src='history/HistoryCtrl.js'></script>
+		<link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='styles/style.css'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<title>Temperature</title>
+	</head>
+	<body ng-app='app'>
+		<div class='container'>
+			<nav-bar></nav-bar>
+			<div ui-view></div>
+		</div>
+	</body>
+</html>
