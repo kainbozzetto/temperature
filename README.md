@@ -1,6 +1,11 @@
 # Temperature
 
+Displaying and recording temperature using an IR Temperature Sensor connected to an Arduino Board and sending the data serially to a NodeJS webserver. Data saved to a MongoDB database using Mongoose on the backend. Frontend developed using AngularJS and Bootstrap with ChartJS to display graphs.
+
 # Setup
+
+Arduino EtherMega 2560
+Freetronics IR Temperature Sensor Module (![alt tag](http://www.freetronics.com.au/collections/modules/products/irtemp-ir-temperature-sensor-module#.V7PrxjUbIsQ))
 
 ![alt tag](https://cloud.githubusercontent.com/assets/8401521/17724570/8a6e8f36-6486-11e6-82e8-912c1ae9700e.jpg)
 
