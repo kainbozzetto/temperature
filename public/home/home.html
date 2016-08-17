@@ -1,0 +1,18 @@
+<h2>Temperature Readings</h2>
+<br>
+<div class='col-md-8'>
+	<div class='panel panel-success'>
+		<div class='panel-heading'><strong>Current</strong></div>
+		<div class='panel-body'>
+			<strong>Infrared:</strong> <span class='label label-info'>{{temperature.ir}}&#176C</span>
+			<br><br>
+			<strong>Ambient:</strong> <span class='label label-danger'>{{temperature.ambient}}&#176C</span>
+		</div>
+	</div>
+	<div class='panel panel-warning'>
+		<div class='panel-heading'><strong>Recent History</strong></div>
+		<div class='panel-body'>
+			<canvas id='line' class='chart chart-line' chart-data='recordings.temperature' chart-labels='recordings.time' chart-series='series' chart-options='chartOptions' chart-colors='colors' chart-dataset-override='datasetOverride'></canvas>
+		</div>
+	</div>
+</div>

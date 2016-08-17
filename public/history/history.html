@@ -1,0 +1,72 @@
+<h2>Temperature History</h2>
+<br>
+<div class='row col-md-8'>
+	<div class='panel panel-success'>
+		<div class='panel-heading'><strong>Search</strong></div>
+		<div class='panel-body'>
+			<div class='col-md-6'>
+				<strong>From:</strong><br>
+				<div class='input-group'>
+					<input type='text' class='form-control' uib-datepicker-popup ng-model='from.date' ng-change='from.changeDate()' is-open='from.opened' datepicker-options='from.dateOptions' ng-required='true' close-text='Close' />
+					<span class='input-group-btn'>
+						<button type='button' class='btn btn-default' ng-click='from.open()'><span><span class='glyphicon glyphicon-calendar'></span></span></button>
+					</span>
+				</div>
+				 <div uib-timepicker ng-model='from.time' ng-change='from.changeTime()' hour-step='1' minute-step='15' show-meridian='true'></div>
+			</div>
+			<div class='col-md-6'>
+				<strong>To:</strong><br>
+				<div class='input-group'>
+					<input type='text' class='form-control' uib-datepicker-popup ng-model='to.date' ng-change='to.changeDate()' is-open='to.opened' datepicker-options='to.dateOptions' ng-required='false' close-text='Close' />
+					<span class='input-group-btn'>
+						<button type='button' class='btn btn-default' ng-click='to.open()'><span><span class='glyphicon glyphicon-calendar'></span></span></button>
+					</span>
+				</div>
+				 <div uib-timepicker ng-model='to.time' ng-change='to.changeTime()' hour-step='1' minute-step='15' show-meridian='true'></div>
+			</div>
+			<div class='col-md-12'>
+				<button type='button' class='btn btn-primary' ng-click='retrieveData()'>Retrieve Data</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='row col-md-8' ng-show='temperatureData.length > 0'>
+	<div class='panel panel-warning'>
+		<div class='panel-heading'><strong>Plot</strong></div>
+		<div class='panel-body'>
+			<canvas id='line' class='chart chart-line' chart-data='temperaturePlot.temperature' chart-labels='temperaturePlot.time' chart-series='series' chart-options='chartOptions' chart-colors='colors' chart-dataset-override='datasetOverride'></canvas>
+		</div>
+	</div>
+</div>
+<div class='row col-md-8' ng-show='temperatureData.length > 0'>
+	<div class='panel panel-info'>
+		<div class='panel-heading clearfix'><button class='btn btn-info btn-xs pull-right' ng-click='downloadData()'><span class='glyphicon glyphicon-download-alt'></span> <strong>Download</strong></button><strong>Data</strong></div>
+		<table class='table table-striped'>
+			<thead>
+				<tr>
+					<th>
+						Time
+					</th>
+					<th>
+						Infrared (&#176C)
+					</th>
+					<th>
+						Ambient (&#176C)
+					</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat='temperature in temperatureData'>
+					<td>
+						{{temperature.date | date: 'M/d/yy h:mm:ss a'}}
+					</td>
+					<td>
+						{{temperature.temperature.ir}}
+					</td>
+					<td>
+						{{temperature.temperature.ambient}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
