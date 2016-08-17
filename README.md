@@ -2,6 +2,8 @@
 
 Displaying and recording temperature using an IR Temperature Sensor connected to an Arduino Board and sending the data serially to a NodeJS webserver. Data saved to a MongoDB database using Mongoose on the backend. Frontend developed using AngularJS and Bootstrap with ChartJS to display graphs.
 
+Arduino code can be found in the temperature folder.
+
 # Setup
 
 * Arduino EtherMega 2560
