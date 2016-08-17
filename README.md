@@ -11,7 +11,7 @@ Displaying and recording temperature using an IR Temperature Sensor connected to
 
 # Client
 
-Developed using AngularJS and Bootstrap and designed to be mobile-compatible. Graphs produced using (Angular) ChartJS.
+Developed using AngularJS and Bootstrap and designed to be mobile-compatible. Graphs produced through (Angular) ChartJS.
 
 ## Home
 
@@ -33,6 +33,6 @@ Once data is retrieved the user is given the ability to download the data as a C
 
 ![Download CSV](https://cloud.githubusercontent.com/assets/8401521/17724635/1070c91e-6487-11e6-9614-431e8db86a56.png)
 
-The CSV file can be opened in Microsoft Excel and converted into an XLS file format from there if desired.
+The CSV file can be opened in Microsoft Excel and can be converted into an XLS file format from there if desired.
 
 ![CSV Data](https://cloud.githubusercontent.com/assets/8401521/17724642/190e6e0a-6487-11e6-958b-aed01c16ae43.png)
