@@ -98,7 +98,7 @@ app.controller('HistoryCtrl', function($scope, $http) {
 			to: new Date($scope.to.date.getTime())
 		};
 
-		$http.get('/data', {
+		$http.get('/api/data', {
 			params: {
 				fromDate: $scope.from.date,
 				toDate: $scope.to.date
@@ -114,14 +114,6 @@ app.controller('HistoryCtrl', function($scope, $http) {
 	}
 
 	$scope.downloadData = function() {
-		// $http.get('/download', {
-
-		// }).then(function(response) {
-		// 	console.log(response);
-		// }, function(response) {
-		// 	console.log('err', response);
-		// });
-
-		jQuery('<form action="/download" method="get"><input type="hidden" name="fromDate" value="' + $scope.retrievedDate.from + '"><input type="hidden" name="toDate" value="' + $scope.retrievedDate.to + '"></form>').appendTo('body').submit().remove();
+		jQuery('<form action="/api/download" method="get"><input type="hidden" name="fromDate" value="' + $scope.retrievedDate.from + '"><input type="hidden" name="toDate" value="' + $scope.retrievedDate.to + '"></form>').appendTo('body').submit().remove();
 	}
 });
